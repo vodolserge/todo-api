@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "25c6c0d9-2e99-4f43-8429-245e9b472b11",
+		"name": "todo api",
+		"description": "todo API collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5943706"
+	},
+	"item": [
+		{
+			"name": "api/login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "vodol.serg@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lara-api.net/api/login",
+					"protocol": "https",
+					"host": [
+						"lara-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Authentificate register users"
+			},
+			"response": []
+		},
+		{
+			"name": "api/register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "vodol.serg@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lara-api.net/api/login",
+					"protocol": "https",
+					"host": [
+						"lara-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Register users"
+			},
+			"response": []
+		},
+		{
+			"name": "api/logout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "23|NhzqZLAvXr7DiYPbvM6OtqUpU91iGnEWAknqZg5V2d156a87",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "vodol.serg@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lara-api.net/api/logout",
+					"protocol": "https",
+					"host": [
+						"lara-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				},
+				"description": "Logout user.  \nNeed `Bearer Token` that retrieves via \"api/login\""
+			},
+			"response": []
+		},
+		{
+			"name": "api/tasks/",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "14|STFJqxSJrbAo7GpkXnq1vwLMqhJYgLOXEK7oHdDy98b4cb88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://lara-api.net/api/tasks/",
+					"protocol": "https",
+					"host": [
+						"lara-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"tasks",
+						""
+					]
+				},
+				"description": "Create task.\n\nNeed `Bearer Token` that retrieves via \"api/login\""
+			},
+			"response": []
+		},
+		{
+			"name": "api/tasks/create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "14|STFJqxSJrbAo7GpkXnq1vwLMqhJYgLOXEK7oHdDy98b4cb88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": " new task 1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": " done",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": " 4",
+							"type": "text"
+						},
+						{
+							"key": " parent_id",
+							"value": " {id} -> not required",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": " Some task description...",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lara-api.net/api/tasks/create",
+					"protocol": "https",
+					"host": [
+						"lara-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"create"
+					]
+				},
+				"description": "Create task.\n\nNeed `Bearer Token` that retrieves via \"api/login\""
+			},
+			"response": []
+		},
+		{
+			"name": "api/tasks/{taskId}/edit",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "21|hmqmTEgKkvJjA2fObNePaLjj4cIl7q9eax7YrAoed7289980",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Changed task title...\",\n    \"status\": \"todo\",\n    \"priority\": 2,\n    \"description\": \"Changed task description...\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lara-api.net/api/tasks/32/update",
+					"protocol": "https",
+					"host": [
+						"lara-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"32",
+						"update"
+					]
+				},
+				"description": "Update task by `ID`.\n\nNeed `Bearer Token` that retrieves via \"api/login\""
+			},
+			"response": []
+		},
+		{
+			"name": "api/tasks/{taskId}/del",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "21|hmqmTEgKkvJjA2fObNePaLjj4cIl7q9eax7YrAoed7289980",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://lara-api.net/api/tasks/29/delete",
+					"protocol": "https",
+					"host": [
+						"lara-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"29",
+						"delete"
+					]
+				},
+				"description": "Delete task by `ID`.  \nNeed `Bearer Token` that retrieves via \"api/login\""
+			},
+			"response": []
+		}
+	]
+}
